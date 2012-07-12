@@ -1,0 +1,31 @@
+<section class="content">
+  <div class="margin-wrapper">
+		<h2>My Profile</h2>
+		{{#if content.isLoaded}}
+      <form class="profile">
+        {{#with content}}
+          <fieldset class="firstName">
+            <label>First name</label>
+            {{view App.TextField contentBinding="name.firstName"}}
+          </fieldset>
+          <fieldset>
+            <label>Prefix</label>
+            {{view App.TextField contentBinding="name.prefix"}}
+          </fieldset>
+          <fieldset>
+            <label>Last name</label>
+            {{view App.TextField contentBinding="name.lastName"}}
+          </fieldset>
+          <fieldset class="command">
+            {{#view App.Button}}
+              <input type="submit" value="Save" class="first"/>
+            {{/view}}      
+            {{#view App.Button}}
+              <input type="button" value="Cancel" {{action showDashboard}}/>
+            {{/view}}
+          </fieldset>
+        {{/with}}
+      </form>		  
+    {{/if}}
+  </div>
+</section> 

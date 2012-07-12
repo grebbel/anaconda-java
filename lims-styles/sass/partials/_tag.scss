@@ -1,0 +1,16 @@
+table.tag {
+  td, th {
+    &.name {
+      width: 28%;
+    }
+    &.category {
+      width: 28%;
+    }
+    &.description {
+      width: 28%;
+    }
+    &.actions {
+      width: 16%;      
+    }
+  }
+}

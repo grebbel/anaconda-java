@@ -1,0 +1,19 @@
+{{#with controller}}
+  {{#if content.isLoaded}}
+  <section class="main">
+    	<div class="margin-wrapper">
+    	  {{view App.AmplificationChart analysesBinding="analyses" typeBinding="chartType" legend=false}}
+    	</div>
+    </section>
+    <section class="main">
+    	<div class="margin-wrapper">
+        {{view App.AmplificationTable contentBinding="content.amplifications" sectionSize=15}}
+    	</div>
+    </section>
+    <section class="main">
+    	<div class="margin-wrapper analysis-group">
+    	  {{view App.CtTable analysesBinding="analyses"}}
+    	</div>
+    </section>
+  {{/if}}
+{{/with}}

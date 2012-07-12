@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- You can provide an optional properties file containing database settings. The DataSource defines default values for 
+		connecting to a local test database. -->
+	<context:property-placeholder location="classpath:/database.properties"
+		ignore-resource-not-found="true" ignore-unresolvable="true" />
+
+	<bean id="dataSource" class="com.mysql.jdbc.jdbc2.optional.MysqlDataSource">
+		<property name="serverName" value="${database.server:localhost}" />
+		<property name="port" value="${database.port:3306}" />
+		<property name="databaseName" value="${database.name:lims_tst}" />
+		<property name="user" value="${database.username:lims_tst}" />
+		<property name="password" value="${database.password:lims_tst}" />
+	</bean>
+
+	<import resource="classpath:/META-INF/spring/mybatis-context.xml" />
+	
+	<context:component-scan base-package="nl.runnable.lims.domain" />
+
+</beans>

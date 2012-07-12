@@ -1,0 +1,73 @@
+$max-height: 660px;
+
+#main.dashboard {
+  background-image: url('../images/backgrounds/amplification-background.jpg');
+  background-position: top;
+  background-repeat: repeat-none;
+  min-height: 540px;
+  max-height: $max-height;
+  
+  section {
+    &.primary {
+      @include column($half-columns);
+      .margin-wrapper {
+        margin-right: 0;
+      }
+    }
+    &.secondary {
+      @include column($half-columns, true);
+      .margin-wrapper {
+        margin-left: 0;
+      }
+    }
+
+  }
+  
+  .activity-feed {
+    padding: 1em;
+    border: 1px solid $border-color;
+    background-color: rgba(255,255,255,0.8);
+    .header {      
+      h3 {
+        display: inline-block;
+        float: left;
+        margin: 0;
+        font-size: 1.75em;
+      }
+      .filter-selector {
+        display: inline-block;
+        float: right;
+      }
+    }
+    
+    .activity-feed-item-container {
+      position: relative;
+      height: 100%;
+      clear: both;
+      max-height: $max-height - 20px;
+      overflow: auto;
+      ul.activity-feed-item {
+        list-style: none;
+        margin-top: 1em;
+        li {
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
+          a {
+            white-space: nowrap;
+          }
+          .date-label {
+            .absolute {
+              font-size: 0.9em;
+              &:before {
+                content: '(';
+              }
+              &:after {
+                content: ')';
+              }
+            }
+          }
+        }
+      }
+    }    
+  }
+}

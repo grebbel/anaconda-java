@@ -1,0 +1,6 @@
+{{#with view}}
+  <input type="text" {{bindAttr size="size"}} {{bindAttr autofocus="autofocus"}} {{bindAttr readonly="readonly"}}/>
+  {{#if validationMessage}}
+    <span class="error message">{{validationMessage}}</span>
+  {{/if}}
+{{/with}}

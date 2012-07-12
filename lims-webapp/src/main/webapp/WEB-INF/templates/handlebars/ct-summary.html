@@ -1,0 +1,11 @@
+<ul>
+  <li>
+    <a class="positive" {{action selectPositive target="controller"}}>Positive: {{view.positiveCount}}</a>
+  </li>
+  <li>
+    <a class="negative" {{action selectNegative target="controller"}}>Negative: {{view.negativeCount}}</a>
+  </li>
+  <li class="last">
+    <a class="indeterminate" {{action selectIndeterminate target="controller"}}>Indeterminate: {{view.indeterminateCount}}</a>
+  </li> 
+</ul>

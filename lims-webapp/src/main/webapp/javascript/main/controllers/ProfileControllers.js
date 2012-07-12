@@ -1,0 +1,1 @@
+App.ProfileController = Em.Controller.extend({});

@@ -1,0 +1,13 @@
+{{#with controller}}
+	<div class="margin-wrapper">
+	  {{view App.AmplificationChart analysesBinding="analyses" requestIdBinding="requestId" typeBinding="chartType" legend=false}}
+	</div>
+	<div class="margin-wrapper">
+		  {{#each analysisGroupControllers}}
+  		  <div class="analysis-group">
+          {{view App.CtHeader groupBinding="group" selectedBinding="active" controllerBinding="this"}}
+    		  {{view App.CtTable controllerBinding="this" analysesBinding="analyses" saveChangesVisibleBinding="analysisSettingModified" committingBinding="committing" isVisibleBinding="active"}}
+    	  </div>
+		  {{/each}}
+	</div>
+{{/with}}

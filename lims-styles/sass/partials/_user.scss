@@ -1,0 +1,114 @@
+$user-menu-top: 6px;
+$user-menu-height: $header-height - $user-menu-top;
+$user-menu-selector-height: 14px;
+$user-menu-selector-width: 23px;
+$user-menu-icon-width: 9px;
+$user-menu-icon-height: 6px;
+
+#user {  
+  
+  .positioning-wrapper {
+    position: relative;    
+    height: $header-height;
+    float: right;
+    margin-right: 1em;    
+  }
+  
+  .user-menu {
+    position: absolute;
+    left: 0;
+    top: $user-menu-top;
+    width: 100%;
+    height: $user-menu-height;
+    .ui-widget-content, .ui-state-default {
+      border: none;
+    }
+    .name {
+      font-size: 1.1em;
+      display: inline-block;
+    }
+    position: relative;
+    .open-menu-container { 
+      display: inline-block;
+      position: relative;
+      width: $user-menu-selector-width;
+      height: $user-menu-selector-height;
+    }
+    .open-menu { 
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      width: $user-menu-selector-width;
+      height: $user-menu-height - 1;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      .icon {
+        position: absolute;
+        top: $user-menu-selector-height - 7px;
+        left: ($user-menu-selector-width - $user-menu-icon-width) / 2;
+        width: $user-menu-icon-width;
+        height: $user-menu-icon-height;
+        background: url('../images/icons/small/triangle-down.png') no-repeat;      
+      }
+      &:hover, &.active {
+        background: $menu-background-color;
+        border: 1px solid $border-color;
+        border-bottom: none;
+        .icon {
+          background: url('../images/icons/small/triangle-down-000000.png') no-repeat;                
+        }
+      }
+    }
+  
+    .popup-menu {
+      position: absolute;
+      width: $user-popup-menu-width;
+      height: $user-popup-menu-height;      
+      .background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        background: $menu-background-color;
+        opacity: 0.9;
+        border: 1px solid $border-color;
+        border-top: none;
+        //border-right: none;
+      }
+      .menu-content {
+        position: absolute;
+        top: 0px;
+        left: 1px;
+        width: 100%;
+        height: 100%;
+        z-index: 101;
+        ul {    
+          list-style-type: none;
+          li {
+            position: relative;
+            height: 2em;
+            a {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+              color: $text-color;
+              text-decoration: none;
+              &:hover {                
+                background: $menu-hover-background-color;
+              }
+              span {
+                display: inline-block;
+                margin: 0.5em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }  
+  
+}

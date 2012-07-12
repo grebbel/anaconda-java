@@ -1,0 +1,90 @@
+$form-width: 400px;
+$form-height: 200px;
+$background-height: 530px;
+
+body.login {
+  
+  #container {
+    @include container;
+    margin-bottom: 0.5em;
+    position: relative;    
+    background-image: url('../images/backgrounds/wave-background.jpg');
+    background-position: top;
+    background-repeat: repeat-none;
+    background-position: 0 -80px;
+  }
+  
+  header {
+    background: none;
+    
+    .background {
+      background-image: url('../images/backgrounds/menu-background.png');
+      background-position: top;
+      background-repeat: repeat-x;
+      opacity: 0.9;
+      position: absolute;
+      z-index: 0;      
+      width: $blueprint-container-size;
+      height: 40px;
+    }
+    
+    h1 {
+      color: $header-text-color;
+      text-align: center;
+      z-index: 1;
+      position: absolute;
+      width: $blueprint-container-size;
+    }
+
+    
+  }
+  
+  #main {
+    padding: none;
+    height: $background-height;
+    padding: 0;    
+    background: none;
+    
+    form, .background  {
+      position: absolute;
+      left: ($blueprint-container-size/2) - ($form-width/2);
+      top: ($background-height/2) - ($form-height/2);
+      width: $form-width;
+      height: $form-height;
+    }
+
+    .background {
+      z-index: 0;
+      background-color: white;
+      opacity: 0.8;
+      border: 1px solid black;
+    }
+
+    form {
+      z-index: 1;
+      padding: 1.5em;
+      label {
+        width: 120px;
+        margin: 0;
+      }
+      label.remember-me {
+        float: none;
+        display: inline;
+        font-weight: normal;
+      }
+
+      input.text {
+        width: 21em;
+      }
+      input.first {
+        margin-left: 120px;
+      }
+
+    }
+
+    .error {
+      color: red;
+    }
+  }
+  
+}

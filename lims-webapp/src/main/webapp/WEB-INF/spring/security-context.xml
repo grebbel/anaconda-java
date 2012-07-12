@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans" xmlns="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd  
+http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+
+	<http auto-config="true" pattern="/api/**" entry-point-ref="apiAuthenticationEntryPoint">
+		<intercept-url pattern="/api/**" access="ROLE_USER" />
+		<logout logout-url="/logout" />
+	</http>
+
+	<http auto-config="true" pattern="/**">
+		<intercept-url pattern="/login.jsp*" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/stylesheets/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/images/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/**" access="ROLE_USER" />
+		<form-login login-page="/login.jsp" authentication-failure-handler-ref="authenticationFailureHandler" />
+		<logout logout-url="/logout" />
+		<remember-me data-source-ref="dataSource" key="anaconda" />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider ref="userAuthenticationProvider" />
+	</authentication-manager>
+
+	<beans:bean id="userAuthenticationProvider" class="nl.runnable.lims.security.UserAuthenticationProvider" />
+
+	<beans:bean id="userDetailsService" class="nl.runnable.lims.security.CustomUserDetailsService" />
+
+	<beans:bean id="apiAuthenticationEntryPoint" class="nl.runnable.lims.webapp.api.ApiAuthenticationEntryPoint" />
+
+	<beans:bean id="authenticationFailureHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+		<beans:property name="useForward" value="true" />
+		<beans:property name="defaultFailureUrl" value="/login.jsp" />
+	</beans:bean>
+
+</beans:beans>

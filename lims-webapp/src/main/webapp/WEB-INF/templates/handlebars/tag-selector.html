@@ -1,0 +1,7 @@
+{{#each controller.content.tags}}
+  {{#view App.TagSelectorItem selectedTagsBinding="controller.content.selectedTags" contentBinding="this"}}
+    {{#with view}}
+      <input name="tag" type="checkbox" {{bindAttr id="name"}} {{bindAttr value="name"}} {{bindAttr checked="checked"}}/ {{bindAttr title="title"}}> <label {{bindAttr for="name"}} {{bindAttr title="title"}}>{{name}}</label>
+    {{/with}}
+  {{/view}}
+{{/each}}

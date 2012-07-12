@@ -1,0 +1,50 @@
+<table>
+  <thead>
+    <tr>
+      <th class="target">
+        {{view App.AnalysisToggleSelector analysesBinding="analyses" label="Target (Assay)" indexBinding="_parentView.contentIndex"}}
+      </th>
+      <th class="treshold number">Treshold</th>
+      <th class="ct number">CT</th>
+      <th class="confirmation">Confirmation</th>
+    </tr>
+  </thead>
+  <tbody class="data">
+	  {{#each analyses}}
+	    <tr>
+	      <td class="target">
+	        {{view App.AnalysisSelector analysisBinding="this" tagName="span"}}
+	        <div class="legend">
+  	        {{view App.Color colorBinding="assayTarget.target.color"}}
+  	        {{view App.FocusButton analysisBinding="this" controllerBinding="controller"}}
+          </div>
+	      </td>
+	      <td class="treshold number">
+	        {{view App.TresholdInput valueBinding="treshold" analysisBinding="this" step="0.02" }}
+	      </td>
+	      <td class="ct number">
+          {{#if ct}}
+            {{view App.CtNumber ctBinding="ct" format="0.00" generatingBinding="generatingCt"}}
+  	      {{/if}}
+	      </td>
+	      <td class="confirmation">
+          {{#if ct}}
+  	        {{view App.AnalysisStatus analysisBinding="this"}}
+	       {{/if}}
+	      </td>
+	    </tr>
+	  {{/each}}	     
+  </tbody>
+  <tfoot>
+    <tr class="save-changes">
+      <td class="blank"></td>
+      <td colspan="3" class="actions">
+        <div class="wrapper">
+          <input type="button" value="Save" {{action "saveChanges" target="controller" }} {{bindAttr disabled="committing"}}/>
+          <input type="button" value="Cancel" {{action "revertChanges" target="controller" }} {{bindAttr disabled="committing"}}/>
+          <span class="small active refresh icon"></span>
+        </div>
+      </td>
+    </tr>
+  </foot>
+</table>

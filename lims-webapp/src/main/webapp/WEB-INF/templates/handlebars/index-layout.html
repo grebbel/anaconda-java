@@ -1,0 +1,22 @@
+{{#if view.title}}
+  <section class="main">
+    <div class="margin-wrapper">
+      <h2>{{view.title}}</h2>
+    </div>
+  </section>
+{{/if}}
+{{#with controller.content}}
+  <section class="main">
+    <div class="margin-wrapper">
+      {{view App.TagSelector selectedTagsBinding="selectedTags" tagsBinding="tags" multiSelect=false}}
+    </div>
+  </section>
+  {{view templateName="page-control" paginationBinding="pagination" pageSizeBinding="controller.pageSize"}}
+  <section class="main">
+    <div class="margin-wrapper">
+      {{yield}}
+    </div>
+  </section>
+  {{view templateName="page-control" paginationBinding="pagination" pageSizeBinding="controller.pageSize"}}
+{{/with}}
+{{view templateName="entity-delete-confirmation-dialog" entityName="view.entityName"}}

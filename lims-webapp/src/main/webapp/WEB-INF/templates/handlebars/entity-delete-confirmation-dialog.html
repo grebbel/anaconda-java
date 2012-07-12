@@ -1,0 +1,10 @@
+<div class="entity-delete-confirmation dialog" style="display: none;">
+  <p>
+    Are you sure you want to delete
+    {{#if controller.contentDescription}}
+      <span class="term">{{controller.contentDescription}}</span>?
+    {{else}}
+      this {{view.entityName}}?
+    {{/if}}
+  </p>
+</div>

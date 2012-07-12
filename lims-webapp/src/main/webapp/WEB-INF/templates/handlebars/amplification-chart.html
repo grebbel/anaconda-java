@@ -1,0 +1,11 @@
+<div class="amplification-chart">    
+  {{#if view.isShow}}
+    {{view App.ChartTypeSelector valueBinding="view.type"}}
+    <img {{bindAttr src="view.src"}} {{bindAttr width="view.width"}} {{bindAttr height="view.height"}} style="border:none;margin:0;padding:0;">
+  {{/if}}
+  <div class="placeholder">
+    <div class="activity">
+      <div class="large active generator icon"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<table class="analysis">
+	<thead>
+		<tr>
+			<th class="date">Date</th>
+			<th class="request">Request</th>
+			<th class="target">Target</th>
+			<th class="assay">Assay</th>
+			<th class="ct number">CT</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each content}}
+			<tr>
+				<td>{{displayDate}}</td>
+				<td>
+          <a {{action showEntity href=true}}>{{request.description}}</a>
+			  </td>
+				<td>{{assayTarget.target.name}}</td>
+				<td>{{assayTarget.assay.name}}</td>
+				<td class="ct number">
+				    {{#if ct}}
+						  {{view App.Number valueBinding="ct.value" format="0.00" statusBinding="status"}}
+					  {{/if}}
+			  </td>
+			</tr>
+		{{/each}}
+	</tbody>
+</table>

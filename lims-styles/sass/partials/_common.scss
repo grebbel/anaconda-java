@@ -1,0 +1,187 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  
+  td, th {
+    background-color: $background-color;
+    border: 1px solid $border-color;
+    vertical-align: top;
+    padding: 0.5em;
+    
+    &.number {
+      text-align: left;
+    }
+    
+    ul {    
+      li {
+        list-style-type: none;
+      }
+    }      
+    ul.comma-separated {
+      li {
+        float: left;
+        margin-right: 0.5em;
+        &:after {
+          content: ', ';
+        }
+        // Workaround for no item indices or 'first' or 'last' indication in Ember.View.
+        &:last-of-type:after {
+          content: '';
+        }
+      }
+    }      
+  }
+  
+  th {
+    font-weight: bold;
+  }
+
+}  
+
+/* Icons */
+
+.small.icon {
+  width: $small-icon-size;
+  height: $small-icon-size;
+}
+
+
+#header {
+  .activity {
+    .small.active.refresh.icon {
+      background: url('#{$small-refresh-icon-black}');
+      opacity: 0.5;
+    }
+  }
+}
+
+#main {
+  .activity {
+    .small.active.refresh.icon {
+      background: url('#{$small-refresh-icon-grey}');
+      opacity: 0.5;
+    }
+  }
+}
+
+
+
+
+/* JQuery UI */
+
+.wijmo-wijpager {
+  
+  .ui-widget-content {
+    background: none;
+  }
+  
+  .ui-list {
+    @include border-radius(0);
+    border: none;
+  }
+  
+  li {
+    float: left;
+    width: 3em;
+    list-style-type: none;
+    text-align: center;
+    
+    &.ui-state-hover, &.ui-state-default {
+      cursor: pointer;
+    }
+  }
+}
+
+.ui-icon {
+  display: inline-block;
+}
+
+.ui-button-text-only .ui-button-text {
+  padding: 0.3em 0.7em;
+  font-size: 0.9em;
+}
+
+.ui-button-text {
+  font-size: 0.9em;
+}
+
+input.ui-button {
+  padding: 0.3em 0.7em;
+  font-size: 1em;
+}
+
+.ui-menu {
+  font-size: 1em;
+}
+
+/* Misc */
+
+.amplification-chart {
+  position: relative;
+  .chart-type-selector {
+    position: absolute;
+    z-index: 1;
+    top: 12px;
+    left: 50%;
+    margin-left: -4em;
+    .ui-button-text {
+      width: 4em;
+    }
+  }  
+}
+
+
+.positive {
+  color: green;
+}
+.negative {
+  color: red;
+}
+.indeterminate {
+  color: $text-color;
+}
+
+
+span.color {
+  position: absolute;
+  display: inline-block;
+  border: 1px solid $border-color;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  span.paint {
+    position: absolute;
+    display: block;
+    top: 3px;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    margin: 0;
+  }
+}
+
+
+td,th {
+  &.blank {
+    background: none; 
+    border: none;
+  }
+}
+
+.range-info, .page-size {
+  float: right;
+  margin-left: 1em;
+}
+
+.range-info {
+  margin-top: 0.4em;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  clear: both;
+}

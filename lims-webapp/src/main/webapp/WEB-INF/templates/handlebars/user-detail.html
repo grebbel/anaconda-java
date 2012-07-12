@@ -1,0 +1,29 @@
+{{#with controller.content}}
+  {{#if isLoaded}}
+    <section class="main">
+    	<div class="margin-wrapper">
+    	  <h2>{{displayName}}</h2>
+    	  <div class="email field"> 
+    	    <label>E-mail</label>
+    	    <div class="value">{{email}}</div>
+    	  </div>
+    	  <div class="roles field">    	    
+      	  <label>Roles</label>      	  
+          <ul class="value">
+            {{#each roles}}
+              <li>{{name}}</li>
+            {{/each}}
+          </ul>
+        </div>
+    	  <div class="groups field">
+      	  <label>Groups</label>
+          <ul class="value">
+            {{#each groups}}
+              <li>{{name}}</li>
+            {{/each}}
+          </ul>
+        </div>
+    	</div>
+    </section>
+  {{/if}}
+{{/with}}

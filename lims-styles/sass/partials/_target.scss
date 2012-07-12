@@ -1,0 +1,22 @@
+table.target {
+  th {
+    &.name {
+      width: 30%;
+    }
+    &.type {
+      width: 12%;
+    }
+    &.color {
+      width: 6%;
+    }
+    &.tags {
+      width: 16%;
+    }    
+    &.codes {
+      width: 18%;
+    }
+    &.actions {
+      width: 18%;
+    }
+  }
+}

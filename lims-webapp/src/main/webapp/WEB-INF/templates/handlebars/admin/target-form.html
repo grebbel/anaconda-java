@@ -1,0 +1,38 @@
+<form>
+  {{#with content}}
+    <fieldset class="required">
+      <label>Name</label>
+      <div class="value">
+        {{view App.TextField contentBinding="name" focus=true validation="notEmpty" name="name"}}
+      </div>
+    </fieldset>
+    <fieldset>
+      <label>Type</label>
+      <div class="value">
+        {{view App.SelectField contentBinding="targetTypeId" source="target-types" isRequired=false selectLabel="<none>"}}
+        <em>This field will be required in the future.</em>
+      </div>
+    </fieldset>
+    <fieldset>
+      <label>Tags</label>
+      <div class="value">
+        {{view App.TagField contentBinding="tags"}}
+      </div>
+    </fieldset>
+    <fieldset>
+      <label>Codes</label>
+      <div class="value">
+        {{view App.ManyTextField contentBinding="codes"}}
+      </div>
+    </fieldset>
+    <fieldset>
+      <label>Description</label>
+      <div class="value">
+        {{view App.TextAreaField contentBinding="description"}}
+      </div>
+    </fieldset>
+    <fieldset class="command">
+      {{view App.FormButtons}}
+    </fieldset>
+  {{/with}}
+</form>

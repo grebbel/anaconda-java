@@ -1,0 +1,17 @@
+<div class="name"><a {{action showProfile href=true}}>{{view.user.displayName}}</a></div>
+<div class="open-menu-container">
+  <div class="open-menu">
+    <span class="icon"></span>
+  </div>
+</div>
+<div class="popup-menu" style="display: none;">
+  <div class="background"></div>
+  <div class="menu-content ui-widget-content">
+    <ul>
+      <li><a {{action showProfile href=true}}><span>My Profile</span></a></li>
+      <li><a {{action logout target="controller"}} href="logout"><span>Logout...</span></a></li>
+    </ul>
+  </div>
+</div>
+
+

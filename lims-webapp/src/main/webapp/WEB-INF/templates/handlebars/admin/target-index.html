@@ -1,0 +1,57 @@
+<table class="target">
+	<thead>
+		<tr>
+			<th class="name">Target</th>
+			<th class="type">Type</th>
+			<th class="color">Color</th>
+			<th class="tags">Tags</th>
+			<th class="codes">Codes</th>
+			<th class="actions"></th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each target in content}}
+		  <tr>
+		    <td class="name">
+		      <a {{action editEntity context="target" href=true}}>{{target.name}}</a>
+	      </td>
+	      <td class="type">
+	          {{target.targetType.name}}
+        </td>
+		    <td class="color">{{view App.Color colorBinding="target.color"}}</td>
+		    <td class="tags">
+		      <ul>
+  		      {{#each target.tags}}
+  		        <li>{{this}}</li>
+		        {{/each}}
+		      </ul>
+	      </td>
+		    <td class="codes">
+		      <ul>
+  		      {{#each target.codes}}
+  		        <li>{{this}}</li>
+		        {{/each}}
+		      </ul>		      
+		    </td>
+		    <td class="actions">
+		      {{#view App.IconButton primary="ui-icon-trash"}}
+  		      <button {{action deleteEntity target="controller" context="target"}}>Delete Target</button>
+		      {{/view}}
+		    </td>
+	    </tr>
+		{{/each}}
+	</tbody>
+	{{#if content.length}}
+    <tfoot>
+        <tr>
+          <td>
+            {{#view App.IconButton primary="ui-icon-plus"}}
+              <button {{action createEntity target="controller"}}>Create Target</button>
+            {{/view}}
+          </td>
+          <td class="blank" colspan="4">
+          </td>
+        </tr>
+    </tfoot>
+  {{/if}}
+</table>

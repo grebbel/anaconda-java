@@ -1,0 +1,11 @@
+{{#with view}}
+  <select {{bindAttr disabled="disabled"}}>
+    <option value="">{{selectLabel}}</option>
+    {{#each item in items}}
+      <option {{bindAttr value="item.value"}}>{{item.label}}</option>
+    {{/each}}
+  </select>
+  {{#if validationMessage}}
+    <span class="error message">{{validationMessage}}</span>
+  {{/if}}  
+{{/with}}

@@ -1,0 +1,16 @@
+<section class="primary">
+	<div class="margin-wrapper">
+		{{view App.Pager
+		  controllerBinding="controller"
+			requestPageBinding="view.pagination.requestPage" 
+			displayPageBinding="view.pagination.displayPage"
+			pageCountBinding="view.pagination.pageCount"
+		}}
+	</div>
+</section>
+<section class="secondary">
+	<div class="margin-wrapper">
+		{{view App.PageSizeSelector pageSizeBinding="view.pageSize"}}
+		{{view templateName="range-info" rangeBinding="view.pagination.displayRange"}}
+	</div>
+</section>

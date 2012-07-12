@@ -1,0 +1,14 @@
+<definitions id="definitions" xmlns:activiti="http://activiti.org/bpmn" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+	targetNamespace="http://www.runnable.nl/lims/rijnstate" xmlns:tns="http://www.runnable.nl/lims/rijnstate">
+
+	<message id="newPlateSetup" name="NewPlateSetup" />
+
+	<process id="plateSetup" name="Plate Setup">
+	
+		<startEvent id="startPlateSetup">
+			<messageEventDefinition messageRef="tns:newPlateSetup" />
+		</startEvent>
+		
+	</process>
+
+</definitions>

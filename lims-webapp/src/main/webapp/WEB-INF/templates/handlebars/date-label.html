@@ -1,0 +1,8 @@
+{{#with view}}
+  {{#if isShowRelative}}
+    <span class="relative" {{bindAttr title="absolute"}}>{{relative}}</span>
+  {{/if}}
+  {{#if isShowAbsolute}}
+    <span class="absolute">{{absolute}}</span>
+  {{/if}}
+{{/with}}

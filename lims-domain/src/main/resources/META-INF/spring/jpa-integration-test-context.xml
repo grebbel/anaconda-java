@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<description>Contains configuration for JPA integration test. This file is explicitly put on the main classpath
+		(as	opposed to the test classpath) to make it available to downstream projects.</description>
+
+	<context:component-scan base-package="nl.runnable.lims" />
+
+	<bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+		<property name="database" value="${database.jpa.database:H2}" />
+		<property name="generateDdl" value="${database.jpa.generate-ddl:true}" />
+		<property name="showSql" value="${database.jpa.show-sql:true}" />
+	</bean>
+
+	<import resource="classpath:/META-INF/spring/database-integration-test-context.xml" />
+
+	<import resource="classpath:/META-INF/spring/jpa-context.xml" />
+
+
+</beans>

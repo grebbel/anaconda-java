@@ -1,0 +1,22 @@
+{{#with view}}
+  <input type="text" {{bindAttr value="value"}} {{bindAttr size="size"}}  {{bindAttr maxlength="maxLength"}} />
+  {{#if nonExistingTags}}
+  The following tags do not exist:
+  <ul>
+     {{#each tag in nonExistingTags}}
+       <li>{{tag}}</li>
+    {{/each}}
+  </ul>
+    <span><input type="button" value="Create tags" {{action createNonExistingTags target="view"}} /></span>
+  {{/if}}
+  {{#if createdTags}}
+    <span class="message">Created the following tags:</span>
+    <ul>
+       {{#each tag in createdTags}}
+         <li>{{tag}}</li>
+      {{/each}}
+    </ul>
+    <input type="button" value="OK" {{action clearCreatedTags target="view"}}/>
+  {{/if}}
+  
+{{/with}}

@@ -1,0 +1,25 @@
+{{#with content}}
+  <form>
+    <fieldset class="required">
+      <label>Name</label>
+      <div class="value">
+        {{view App.TextField contentBinding="name" focus="true" validation="notEmpty" name="name"}}
+      </div>
+    </fieldset>
+    <fieldset>
+      <label>Category</label>
+      <div class="value">
+        {{view App.TextField contentBinding="category"}}
+      </div>
+    </fieldset>
+    <fieldset>
+      <label>Description</label>
+      <div class="value">
+        {{view App.TextAreaField contentBinding="description"}}
+      </div>
+    </fieldset>
+    <fieldset class="command">
+      {{view App.FormButtons}}
+    </fieldset>
+  </form>
+{{/with}}

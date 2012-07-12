@@ -1,0 +1,16 @@
+table.target-type {
+  td, th {
+    &.name {
+      width: 26%;
+    }
+    &.codes {
+      width: 26%;
+    }
+    &.description {
+      width: 26%;
+    }
+    &.actions {
+      width: 22%;
+    }
+  }
+}

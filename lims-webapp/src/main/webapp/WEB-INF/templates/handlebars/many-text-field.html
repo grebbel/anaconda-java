@@ -1,0 +1,6 @@
+{{#with view}}
+<textarea {{bindAttr cols="cols"}} {{bindAttr rows="rows"}}></textarea>
+{{#if validationMessage}}
+  <span class="error message">{{validationMessage}}</span>
+{{/if}}
+{{/with}}

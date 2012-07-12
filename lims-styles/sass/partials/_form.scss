@@ -1,0 +1,79 @@
+$label-width: 120px;  
+$tag-field-width: 300px;
+
+form {
+  @include column($blueprint-grid-columns, true);
+  
+  fieldset {
+    @include column($blueprint-grid-columns, true);
+    list-style-type: none;
+    margin-bottom: 0.5em;
+    
+    &.required label:after {
+      content: ' *';
+    }
+    
+    label {      
+      @include column(4, false);
+      font-weight: bold;
+    }
+    
+    .value {
+      @include column($blueprint-grid-columns - 4, true);
+      
+    }
+    
+    .tagify-container {
+      width: $tag-field-width;
+      height: auto;
+      margin-left: 2px;
+      border: 1px solid $border-color;
+      border-radius: 0;
+      & > input {
+          font-size: 1em;
+      }
+      & > span {
+        border: 1px solid $border-color;
+        color: $text-color;
+      }
+    }
+
+    .select-list-field {
+      select {
+        display: inline-block;
+        float: left;
+        margin-right: 1em;
+      }
+     .selected-items {
+       display: inline-block;
+     }
+     .message {
+       clear: both;
+     }
+    }
+    
+    .error {
+      color: red;
+    }
+    
+    .many-text-field .message {
+      display: block;
+    }
+    
+  }
+  
+  fieldset.command {
+    @include prepend(4);
+    @include column($blueprint-grid-columns - 4, true);
+    input {
+      width: 7em;
+      margin-right: 0.5em;
+
+    }
+  }
+  
+}
+
+.ui-autocomplete.ui-menu {
+  width: $tag-field-width - 5px;
+}

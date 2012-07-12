@@ -1,0 +1,25 @@
+{{#with view}}
+  {{#if items.length}}
+    <select {{bindAttr size="size"}} {{bindAttr multiple="multiple"}}>
+      {{#each item in items}}
+        <option {{bindAttr value="item.value"}}>{{item.label}}</option>
+      {{/each}}
+    </select>
+    {{#if multiple}}
+      <div class="selected-items">
+        {{#if selectedItems.length}}
+          <ul>
+            {{#each item in selectedItems}}
+              <li>{{item.label}}</li>
+            {{/each}}
+          </ul>
+        {{else}}
+          &nbsp;
+        {{/if}}
+      </div>
+    {{/if}}
+  {{/if}}  
+  {{#if validationMessage}}
+    <div class="error message">{{validationMessage}}</div>
+  {{/if}}  
+{{/with}}

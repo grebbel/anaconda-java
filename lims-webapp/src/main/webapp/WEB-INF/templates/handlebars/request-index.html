@@ -1,0 +1,25 @@
+<table class="request">
+	<thead>
+		<tr>
+			<th class="date">Date</th>
+			<th class="description">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each content.content}}
+			<tr>
+				<td>{{unbound displayDate}}</td>
+				<td>
+          <a {{action showAnalysis href=true}}>{{request.description}}</a>
+			  </td>
+				<td>{{unbound assayTarget.target.label}}</td>
+				<td>{{unbound assayTarget.assay.label}}</td>
+				<td class="ct number">
+				    {{#if ct}}
+						  {{view App.Number value=ct.value format="0.00" status=status}}
+					  {{/if}}
+			  </td>
+			</tr>
+		{{/each}}
+	</tbody>
+</table>

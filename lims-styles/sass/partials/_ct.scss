@@ -1,0 +1,118 @@
+.analysis-group { 
+  
+  .header {
+    cursor: pointer;
+    padding: .5em;
+    margin: 0;
+  
+    position: relative;
+  
+    .title {
+      display: inline-block;
+    }
+    .summary {
+      display: inline-block;
+      float: right;
+      ul {
+        list-style-type: none;    
+        li {
+          float: left;
+          margin-right: 0.5em;
+          a {
+            text-decoration: none;
+            &.positive {
+              color: green;
+            }
+            &.negative {
+              color: red;
+            }
+            &.indeterminate {
+              color: $text-color;
+            }
+          }
+          a:hover {
+            text-decoration: underline;
+          }      
+        }
+      }
+    }
+  }
+
+  table {
+     width: 100%;
+     margin-top: 0;
+
+    /*thead th {
+       border-top: none;
+     }*/
+ 
+     td, th {
+       vertical-align: middle;
+       .legend {
+         display: block;
+         float: right;
+         position: relative;
+         width: 36px;
+         height: 20px;
+       }
+       .focus {         
+         button {
+           position: absolute;
+           left: 20px;
+           width: 18px;
+           height: 18px;
+           .ui-button-text {
+             display: none;
+           }
+         }
+       }
+       input.treshold {
+         display: block;
+         float: right;
+         padding: 0;
+         margin: 0;
+         width: 5em;
+         text-align: right;
+       }
+       &.target {
+         width: 66%;       
+       }        
+       &.treshold {
+         width: 9%;
+       }
+       &.ct {
+         width: 7%;
+         .small.active.generator.icon {
+           background: url('#{$small-generator-icon-white}');
+           float: right;
+         }
+       }
+       &.confirmation {
+         width: 18%;
+   
+         .positive {
+           color: green;
+         }
+         .negative {
+           color: red;
+         }
+       }
+     }
+     tfoot {
+       .actions {
+         .wrapper {
+           float: right;
+         }
+         .ui-button {
+           width: 6em;
+         }
+       }
+       .blank {
+         background: none; 
+         border: none;
+       }
+     }
+  }
+
+} // .analysis-group
+

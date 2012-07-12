@@ -1,0 +1,10 @@
+<ul>
+	<li><a {{action showDashboard href=true}}>Dashboard</a></li>
+	{{#if App.user.hasUserRole}}
+  	<li><a {{action showTasks href=true}}>Tasks</a></li>
+  	<li><a {{action showAnalyses href=true}}>Analyses</a></li>
+	{{/if}}
+	{{#if App.user.hasAdminRole}}
+  	<li><a {{action showAdmin href=true}}>Admin</a></li>
+	{{/if}}
+</ul>

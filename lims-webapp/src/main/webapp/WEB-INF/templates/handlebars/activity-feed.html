@@ -1,0 +1,17 @@
+<div class="header">
+  <h3>Activity Stream</h3>
+  <div class="filter-selector">
+    <input id="activity-show-minor" type="checkbox" {{bindAttr checked="controller.isShowMinor"}} {{action toggleShowMinor on="change" target="controller"}}/>
+    <label for="activity-show-minor">Show minor activity</label>
+  </div>
+</div>
+<div class="activity-feed-item-container">
+  <ul class="activity-feed-item">
+  {{#each controller.content}}
+      <li>
+          {{view contentBinding="this" templateName=templateName classNames="message"}}
+          {{view App.DateLabel content=date}}
+      </li>
+  {{/each}}
+  </ul>
+</div>

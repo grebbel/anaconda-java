@@ -1,0 +1,1264 @@
+/* line 4, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 18, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+.bp-reset-element, body, h1, h2, h3, h4, h5, h6, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, blockquote, q, th, td, caption, table,
+div, span, object, iframe, p,
+pre, a, abbr, acronym, address,
+code, del, dfn, em, img,
+dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend,
+caption, tbody, tfoot, thead, tr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 21, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+blockquote, q {
+  quotes: "" "";
+}
+/* line 67, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+}
+
+/* line 22, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+th, td, caption {
+  float: none !important;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 23, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 24, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* Tagify styles 
+Author: Alicia Liu
+*/
+/* line 5, ../../../../../lims-styles/sass/partials/third-party/_tagify-style.scss */
+.tagify-container {
+  width: 300px;
+  height: 100px;
+  border: 1px solid #CCC;
+  background-color: #FFF;
+  border-radius: 2px;
+  font-family: Verdana, sans-serif;
+  font-size: 12px;
+  overflow: auto;
+}
+
+/* line 15, ../../../../../lims-styles/sass/partials/third-party/_tagify-style.scss */
+.tagify-container > span {
+  display: inline-block;
+  padding: 3px 5px;
+  margin: 3px;
+  border-radius: 2px;
+  border: 1px solid #EEE;
+  background-color: #f4f38c;
+  color: #888;
+}
+
+/* line 24, ../../../../../lims-styles/sass/partials/third-party/_tagify-style.scss */
+.tagify-container > span > a {
+  padding-left: 5px;
+  color: #EB7E14;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* line 30, ../../../../../lims-styles/sass/partials/third-party/_tagify-style.scss */
+.tagify-container > input {
+  border: 0 none;
+  width: 100px;
+}
+
+/* line 34, ../../../../../lims-styles/sass/partials/third-party/_tagify-style.scss */
+.tagify-container > input:focus {
+  outline: none;
+}
+
+/* line 1, ../../../../../lims-styles/sass/partials/_text.scss */
+html {
+  font-size: 100.01%;
+}
+
+/* line 5, ../../../../../lims-styles/sass/partials/_text.scss */
+body {
+  font-size: 75%;
+  /* 
+    12px = 75%
+    13px = 81%
+    14px = 88%
+  */
+  font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+  color: #202020;
+  background-color: white;
+}
+
+/* line 17, ../../../../../lims-styles/sass/partials/_text.scss */
+h1 {
+  font-size: 2.5em;
+}
+
+/* line 21, ../../../../../lims-styles/sass/partials/_text.scss */
+h2 {
+  font-size: 2.0em;
+  margin-bottom: 0.25em;
+}
+
+/* line 26, ../../../../../lims-styles/sass/partials/_text.scss */
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.25em;
+}
+
+/* line 32, ../../../../../lims-styles/sass/partials/_text.scss */
+section.main.heading .margin-wrapper h1, section.main.heading .margin-wrapper h2, section.main.heading .margin-wrapper h3 {
+  margin: 0;
+}
+
+/* line 38, ../../../../../lims-styles/sass/partials/_text.scss */
+.content li {
+  margin-left: 1.5em;
+}
+
+/* line 41, ../../../../../lims-styles/sass/partials/_text.scss */
+span.term {
+  white-space: nowrap;
+}
+/* line 43, ../../../../../lims-styles/sass/partials/_text.scss */
+span.term:before, span.term:after {
+  content: '"';
+}
+
+/* line 48, ../../../../../lims-styles/sass/partials/_text.scss */
+p {
+  margin-bottom: 0.5em;
+}
+
+/* line 52, ../../../../../lims-styles/sass/partials/_text.scss */
+em {
+  font-style: italic;
+}
+
+/* line 4, ../../../../../lims-styles/sass/partials/_layout.scss */
+#container {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+  margin-bottom: 0.5em;
+  border: 1px solid #909090;
+  border-top: 0;
+}
+
+/* line 12, ../../../../../lims-styles/sass/partials/_layout.scss */
+header {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+  background-image: url("../images/backgrounds/menu-background.png");
+  background-position: top;
+  background-repeat: repeat-x;
+  color: #e0e0e0;
+  height: 32px;
+}
+/* line 147, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html header {
+  overflow-x: hidden;
+}
+/* line 19, ../../../../../lims-styles/sass/partials/_layout.scss */
+header .margin-wrapper {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+/* line 26, ../../../../../lims-styles/sass/partials/_layout.scss */
+header a {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+/* line 29, ../../../../../lims-styles/sass/partials/_layout.scss */
+header a:hover {
+  text-decoration: underline;
+}
+/* line 34, ../../../../../lims-styles/sass/partials/_layout.scss */
+header nav {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 710px;
+  padding-right: 40px;
+}
+/* line 147, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html header nav {
+  overflow-x: hidden;
+}
+/* line 37, ../../../../../lims-styles/sass/partials/_layout.scss */
+header nav ul {
+  list-style-type: none;
+  font-size: 1.2em;
+  margin-bottom: 0em;
+  display: inline-block;
+}
+/* line 42, ../../../../../lims-styles/sass/partials/_layout.scss */
+header nav ul li {
+  color: #e0e0e0;
+  float: left;
+  margin-right: 0.5em;
+}
+/* line 46, ../../../../../lims-styles/sass/partials/_layout.scss */
+header nav ul li:after {
+  content: ' | ';
+}
+/* line 49, ../../../../../lims-styles/sass/partials/_layout.scss */
+header nav ul li:last-of-type:after {
+  content: '';
+}
+/* line 52, ../../../../../lims-styles/sass/partials/_layout.scss */
+header nav ul li.selected {
+  /*font-weight: bold;*/
+}
+/* line 59, ../../../../../lims-styles/sass/partials/_layout.scss */
+header #user {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 190px;
+}
+/* line 147, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html header #user {
+  overflow-x: hidden;
+}
+
+/* line 65, ../../../../../lims-styles/sass/partials/_layout.scss */
+content {
+  background-color: #f0f0f0;
+  min-height: 4em;
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 950px;
+}
+/* line 147, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html content {
+  overflow-x: hidden;
+}
+/* line 69, ../../../../../lims-styles/sass/partials/_layout.scss */
+content #main {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 950px;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+}
+/* line 147, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html content #main {
+  overflow-x: hidden;
+}
+/* line 71, ../../../../../lims-styles/sass/partials/_layout.scss */
+content #main section {
+  margin-top: 0.5em;
+}
+/* line 73, ../../../../../lims-styles/sass/partials/_layout.scss */
+content #main section.main {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 950px;
+}
+/* line 147, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html content #main section.main {
+  overflow-x: hidden;
+}
+/* line 76, ../../../../../lims-styles/sass/partials/_layout.scss */
+content #main section.primary {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 630px;
+}
+/* line 147, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html content #main section.primary {
+  overflow-x: hidden;
+}
+/* line 79, ../../../../../lims-styles/sass/partials/_layout.scss */
+content #main section.secondary {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 310px;
+}
+/* line 147, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html content #main section.secondary {
+  overflow-x: hidden;
+}
+/* line 82, ../../../../../lims-styles/sass/partials/_layout.scss */
+content #main section .margin-wrapper {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/* line 92, ../../../../../lims-styles/sass/partials/_layout.scss */
+.field {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 950px;
+  margin-bottom: 0.5em;
+}
+/* line 147, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .field {
+  overflow-x: hidden;
+}
+/* line 95, ../../../../../lims-styles/sass/partials/_layout.scss */
+.field label {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 150px;
+  font-weight: bold;
+}
+/* line 147, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .field label {
+  overflow-x: hidden;
+}
+/* line 99, ../../../../../lims-styles/sass/partials/_layout.scss */
+.field .value {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 790px;
+}
+/* line 147, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .field .value {
+  overflow-x: hidden;
+}
+/* line 102, ../../../../../lims-styles/sass/partials/_layout.scss */
+.field ul li {
+  margin-left: 1.5em;
+}
+
+/* line 1, ../../../../../lims-styles/sass/partials/_common.scss */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+/* line 5, ../../../../../lims-styles/sass/partials/_common.scss */
+table td, table th {
+  background-color: white;
+  border: 1px solid #909090;
+  vertical-align: top;
+  padding: 0.5em;
+}
+/* line 11, ../../../../../lims-styles/sass/partials/_common.scss */
+table td.number, table th.number {
+  text-align: left;
+}
+/* line 16, ../../../../../lims-styles/sass/partials/_common.scss */
+table td ul li, table th ul li {
+  list-style-type: none;
+}
+/* line 21, ../../../../../lims-styles/sass/partials/_common.scss */
+table td ul.comma-separated li, table th ul.comma-separated li {
+  float: left;
+  margin-right: 0.5em;
+}
+/* line 24, ../../../../../lims-styles/sass/partials/_common.scss */
+table td ul.comma-separated li:after, table th ul.comma-separated li:after {
+  content: ', ';
+}
+/* line 28, ../../../../../lims-styles/sass/partials/_common.scss */
+table td ul.comma-separated li:last-of-type:after, table th ul.comma-separated li:last-of-type:after {
+  content: '';
+}
+/* line 35, ../../../../../lims-styles/sass/partials/_common.scss */
+table th {
+  font-weight: bold;
+}
+
+/* Icons */
+/* line 43, ../../../../../lims-styles/sass/partials/_common.scss */
+.small.icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* line 51, ../../../../../lims-styles/sass/partials/_common.scss */
+#header .activity .small.active.refresh.icon {
+  background: url("../images/icons/small/ajax-refresh-000000.gif");
+  opacity: 0.5;
+}
+
+/* line 60, ../../../../../lims-styles/sass/partials/_common.scss */
+#main .activity .small.active.refresh.icon {
+  background: url("../images/icons/small/ajax-refresh-f0f0f0.gif");
+  opacity: 0.5;
+}
+
+/* JQuery UI */
+/* line 74, ../../../../../lims-styles/sass/partials/_common.scss */
+.wijmo-wijpager .ui-widget-content {
+  background: none;
+}
+/* line 78, ../../../../../lims-styles/sass/partials/_common.scss */
+.wijmo-wijpager .ui-list {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  border: none;
+}
+/* line 83, ../../../../../lims-styles/sass/partials/_common.scss */
+.wijmo-wijpager li {
+  float: left;
+  width: 3em;
+  list-style-type: none;
+  text-align: center;
+}
+/* line 89, ../../../../../lims-styles/sass/partials/_common.scss */
+.wijmo-wijpager li.ui-state-hover, .wijmo-wijpager li.ui-state-default {
+  cursor: pointer;
+}
+
+/* line 95, ../../../../../lims-styles/sass/partials/_common.scss */
+.ui-icon {
+  display: inline-block;
+}
+
+/* line 99, ../../../../../lims-styles/sass/partials/_common.scss */
+.ui-button-text-only .ui-button-text {
+  padding: 0.3em 0.7em;
+  font-size: 0.9em;
+}
+
+/* line 104, ../../../../../lims-styles/sass/partials/_common.scss */
+.ui-button-text {
+  font-size: 0.9em;
+}
+
+/* line 108, ../../../../../lims-styles/sass/partials/_common.scss */
+input.ui-button {
+  padding: 0.3em 0.7em;
+  font-size: 1em;
+}
+
+/* line 113, ../../../../../lims-styles/sass/partials/_common.scss */
+.ui-menu {
+  font-size: 1em;
+}
+
+/* Misc */
+/* line 119, ../../../../../lims-styles/sass/partials/_common.scss */
+.amplification-chart {
+  position: relative;
+}
+/* line 121, ../../../../../lims-styles/sass/partials/_common.scss */
+.amplification-chart .chart-type-selector {
+  position: absolute;
+  z-index: 1;
+  top: 12px;
+  left: 50%;
+  margin-left: -4em;
+}
+/* line 127, ../../../../../lims-styles/sass/partials/_common.scss */
+.amplification-chart .chart-type-selector .ui-button-text {
+  width: 4em;
+}
+
+/* line 134, ../../../../../lims-styles/sass/partials/_common.scss */
+.positive {
+  color: green;
+}
+
+/* line 137, ../../../../../lims-styles/sass/partials/_common.scss */
+.negative {
+  color: red;
+}
+
+/* line 140, ../../../../../lims-styles/sass/partials/_common.scss */
+.indeterminate {
+  color: #202020;
+}
+
+/* line 145, ../../../../../lims-styles/sass/partials/_common.scss */
+span.color {
+  position: absolute;
+  display: inline-block;
+  border: 1px solid #909090;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+/* line 152, ../../../../../lims-styles/sass/partials/_common.scss */
+span.color span.paint {
+  position: absolute;
+  display: block;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  margin: 0;
+}
+
+/* line 165, ../../../../../lims-styles/sass/partials/_common.scss */
+td.blank, th.blank {
+  background: none;
+  border: none;
+}
+
+/* line 171, ../../../../../lims-styles/sass/partials/_common.scss */
+.range-info, .page-size {
+  float: right;
+  margin-left: 1em;
+}
+
+/* line 176, ../../../../../lims-styles/sass/partials/_common.scss */
+.range-info {
+  margin-top: 0.4em;
+}
+
+/* line 180, ../../../../../lims-styles/sass/partials/_common.scss */
+.clearfix:after {
+  content: ".";
+  display: block;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  clear: both;
+}
+
+/* line 3, ../../../../../lims-styles/sass/partials/_dashboard.scss */
+#main.dashboard {
+  background-image: url("../images/backgrounds/amplification-background.jpg");
+  background-position: top;
+  background-repeat: repeat-none;
+  min-height: 540px;
+  max-height: 660px;
+}
+/* line 11, ../../../../../lims-styles/sass/partials/_dashboard.scss */
+#main.dashboard section.primary {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 470px;
+}
+/* line 147, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #main.dashboard section.primary {
+  overflow-x: hidden;
+}
+/* line 13, ../../../../../lims-styles/sass/partials/_dashboard.scss */
+#main.dashboard section.primary .margin-wrapper {
+  margin-right: 0;
+}
+/* line 17, ../../../../../lims-styles/sass/partials/_dashboard.scss */
+#main.dashboard section.secondary {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 470px;
+}
+/* line 147, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #main.dashboard section.secondary {
+  overflow-x: hidden;
+}
+/* line 19, ../../../../../lims-styles/sass/partials/_dashboard.scss */
+#main.dashboard section.secondary .margin-wrapper {
+  margin-left: 0;
+}
+/* line 26, ../../../../../lims-styles/sass/partials/_dashboard.scss */
+#main.dashboard .activity-feed {
+  padding: 1em;
+  border: 1px solid #909090;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+/* line 31, ../../../../../lims-styles/sass/partials/_dashboard.scss */
+#main.dashboard .activity-feed .header h3 {
+  display: inline-block;
+  float: left;
+  margin: 0;
+  font-size: 1.75em;
+}
+/* line 37, ../../../../../lims-styles/sass/partials/_dashboard.scss */
+#main.dashboard .activity-feed .header .filter-selector {
+  display: inline-block;
+  float: right;
+}
+/* line 43, ../../../../../lims-styles/sass/partials/_dashboard.scss */
+#main.dashboard .activity-feed .activity-feed-item-container {
+  position: relative;
+  height: 100%;
+  clear: both;
+  max-height: 640px;
+  overflow: auto;
+}
+/* line 49, ../../../../../lims-styles/sass/partials/_dashboard.scss */
+#main.dashboard .activity-feed .activity-feed-item-container ul.activity-feed-item {
+  list-style: none;
+  margin-top: 1em;
+}
+/* line 52, ../../../../../lims-styles/sass/partials/_dashboard.scss */
+#main.dashboard .activity-feed .activity-feed-item-container ul.activity-feed-item li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+/* line 55, ../../../../../lims-styles/sass/partials/_dashboard.scss */
+#main.dashboard .activity-feed .activity-feed-item-container ul.activity-feed-item li a {
+  white-space: nowrap;
+}
+/* line 59, ../../../../../lims-styles/sass/partials/_dashboard.scss */
+#main.dashboard .activity-feed .activity-feed-item-container ul.activity-feed-item li .date-label .absolute {
+  font-size: 0.9em;
+}
+/* line 61, ../../../../../lims-styles/sass/partials/_dashboard.scss */
+#main.dashboard .activity-feed .activity-feed-item-container ul.activity-feed-item li .date-label .absolute:before {
+  content: '(';
+}
+/* line 64, ../../../../../lims-styles/sass/partials/_dashboard.scss */
+#main.dashboard .activity-feed .activity-feed-item-container ul.activity-feed-item li .date-label .absolute:after {
+  content: ')';
+}
+
+/* line 3, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group .header {
+  cursor: pointer;
+  padding: .5em;
+  margin: 0;
+  position: relative;
+}
+/* line 10, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group .header .title {
+  display: inline-block;
+}
+/* line 13, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group .header .summary {
+  display: inline-block;
+  float: right;
+}
+/* line 16, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group .header .summary ul {
+  list-style-type: none;
+}
+/* line 18, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group .header .summary ul li {
+  float: left;
+  margin-right: 0.5em;
+}
+/* line 21, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group .header .summary ul li a {
+  text-decoration: none;
+}
+/* line 23, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group .header .summary ul li a.positive {
+  color: green;
+}
+/* line 26, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group .header .summary ul li a.negative {
+  color: red;
+}
+/* line 29, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group .header .summary ul li a.indeterminate {
+  color: #202020;
+}
+/* line 33, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group .header .summary ul li a:hover {
+  text-decoration: underline;
+}
+/* line 41, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group table {
+  width: 100%;
+  margin-top: 0;
+  /*thead th {
+     border-top: none;
+   }*/
+}
+/* line 49, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group table td, .analysis-group table th {
+  vertical-align: middle;
+}
+/* line 51, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group table td .legend, .analysis-group table th .legend {
+  display: block;
+  float: right;
+  position: relative;
+  width: 36px;
+  height: 20px;
+}
+/* line 59, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group table td .focus button, .analysis-group table th .focus button {
+  position: absolute;
+  left: 20px;
+  width: 18px;
+  height: 18px;
+}
+/* line 64, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group table td .focus button .ui-button-text, .analysis-group table th .focus button .ui-button-text {
+  display: none;
+}
+/* line 69, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group table td input.treshold, .analysis-group table th input.treshold {
+  display: block;
+  float: right;
+  padding: 0;
+  margin: 0;
+  width: 5em;
+  text-align: right;
+}
+/* line 77, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group table td.target, .analysis-group table th.target {
+  width: 66%;
+}
+/* line 80, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group table td.treshold, .analysis-group table th.treshold {
+  width: 9%;
+}
+/* line 83, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group table td.ct, .analysis-group table th.ct {
+  width: 7%;
+}
+/* line 85, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group table td.ct .small.active.generator.icon, .analysis-group table th.ct .small.active.generator.icon {
+  background: url("../images/icons/small/ajax-generator-ffffff.gif");
+  float: right;
+}
+/* line 90, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group table td.confirmation, .analysis-group table th.confirmation {
+  width: 18%;
+}
+/* line 93, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group table td.confirmation .positive, .analysis-group table th.confirmation .positive {
+  color: green;
+}
+/* line 96, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group table td.confirmation .negative, .analysis-group table th.confirmation .negative {
+  color: red;
+}
+/* line 103, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group table tfoot .actions .wrapper {
+  float: right;
+}
+/* line 106, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group table tfoot .actions .ui-button {
+  width: 6em;
+}
+/* line 110, ../../../../../lims-styles/sass/partials/_ct.scss */
+.analysis-group table tfoot .blank {
+  background: none;
+  border: none;
+}
+
+/* line 4, ../../../../../lims-styles/sass/partials/_analysis.scss */
+table.analysis td.date, table.analysis th.date {
+  width: 13%;
+}
+/* line 7, ../../../../../lims-styles/sass/partials/_analysis.scss */
+table.analysis td.request, table.analysis th.request {
+  width: 27%;
+}
+/* line 11, ../../../../../lims-styles/sass/partials/_analysis.scss */
+table.analysis td.target, table.analysis th.target {
+  width: 26%;
+}
+/* line 14, ../../../../../lims-styles/sass/partials/_analysis.scss */
+table.analysis td.assay, table.analysis th.assay {
+  width: 26%;
+}
+/* line 17, ../../../../../lims-styles/sass/partials/_analysis.scss */
+table.analysis td.ct, table.analysis th.ct {
+  width: 8%;
+}
+/* line 19, ../../../../../lims-styles/sass/partials/_analysis.scss */
+table.analysis td.ct .positive, table.analysis th.ct .positive {
+  color: green;
+}
+/* line 21, ../../../../../lims-styles/sass/partials/_analysis.scss */
+table.analysis td.ct .positive:after, table.analysis th.ct .positive:after {
+  content: ' +';
+}
+/* line 25, ../../../../../lims-styles/sass/partials/_analysis.scss */
+table.analysis td.ct .negative, table.analysis th.ct .negative {
+  color: red;
+}
+/* line 27, ../../../../../lims-styles/sass/partials/_analysis.scss */
+table.analysis td.ct .negative:after, table.analysis th.ct .negative:after {
+  content: ' -';
+}
+
+/* line 35, ../../../../../lims-styles/sass/partials/_analysis.scss */
+.amplification {
+  margin-top: 0.5em;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 42, ../../../../../lims-styles/sass/partials/_analysis.scss */
+.amplification section {
+  display: inline-block;
+  float: left;
+  width: 33%;
+}
+
+/* line 52, ../../../../../lims-styles/sass/partials/_analysis.scss */
+table.amplification {
+  clear: both;
+}
+/* line 58, ../../../../../lims-styles/sass/partials/_analysis.scss */
+table.amplification td.number, table.amplification th.number {
+  text-align: right;
+}
+/* line 62, ../../../../../lims-styles/sass/partials/_analysis.scss */
+table.amplification td.cycle, table.amplification th.cycle {
+  width: 30%;
+}
+/* line 65, ../../../../../lims-styles/sass/partials/_analysis.scss */
+table.amplification td.rn, table.amplification th.rn {
+  width: 35%;
+}
+/* line 68, ../../../../../lims-styles/sass/partials/_analysis.scss */
+table.amplification td.delta-rn, table.amplification th.delta-rn {
+  width: 35%;
+}
+/* line 71, ../../../../../lims-styles/sass/partials/_analysis.scss */
+table.amplification td.after-treshold, table.amplification td.before-treshold, table.amplification th.after-treshold, table.amplification th.before-treshold {
+  font-weight: bold;
+}
+
+/* line 3, ../../../../../lims-styles/sass/partials/_task.scss */
+table.task td.description, table.task th.description {
+  width: 40%;
+}
+/* line 6, ../../../../../lims-styles/sass/partials/_task.scss */
+table.task td.due, table.task th.due {
+  width: 15%;
+}
+/* line 9, ../../../../../lims-styles/sass/partials/_task.scss */
+table.task td.assign, table.task th.assign {
+  width: 20%;
+}
+
+/* line 3, ../../../../../lims-styles/sass/partials/_target.scss */
+table.target th.name {
+  width: 30%;
+}
+/* line 6, ../../../../../lims-styles/sass/partials/_target.scss */
+table.target th.type {
+  width: 12%;
+}
+/* line 9, ../../../../../lims-styles/sass/partials/_target.scss */
+table.target th.color {
+  width: 6%;
+}
+/* line 12, ../../../../../lims-styles/sass/partials/_target.scss */
+table.target th.tags {
+  width: 16%;
+}
+/* line 15, ../../../../../lims-styles/sass/partials/_target.scss */
+table.target th.codes {
+  width: 18%;
+}
+/* line 18, ../../../../../lims-styles/sass/partials/_target.scss */
+table.target th.actions {
+  width: 18%;
+}
+
+/* line 3, ../../../../../lims-styles/sass/partials/_tag.scss */
+table.tag td.name, table.tag th.name {
+  width: 28%;
+}
+/* line 6, ../../../../../lims-styles/sass/partials/_tag.scss */
+table.tag td.category, table.tag th.category {
+  width: 28%;
+}
+/* line 9, ../../../../../lims-styles/sass/partials/_tag.scss */
+table.tag td.description, table.tag th.description {
+  width: 28%;
+}
+/* line 12, ../../../../../lims-styles/sass/partials/_tag.scss */
+table.tag td.actions, table.tag th.actions {
+  width: 16%;
+}
+
+/* line 4, ../../../../../lims-styles/sass/partials/_form.scss */
+form {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 950px;
+}
+/* line 147, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html form {
+  overflow-x: hidden;
+}
+/* line 7, ../../../../../lims-styles/sass/partials/_form.scss */
+form fieldset {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 950px;
+  list-style-type: none;
+  margin-bottom: 0.5em;
+}
+/* line 147, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html form fieldset {
+  overflow-x: hidden;
+}
+/* line 12, ../../../../../lims-styles/sass/partials/_form.scss */
+form fieldset.required label:after {
+  content: ' *';
+}
+/* line 16, ../../../../../lims-styles/sass/partials/_form.scss */
+form fieldset label {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 150px;
+  font-weight: bold;
+}
+/* line 147, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html form fieldset label {
+  overflow-x: hidden;
+}
+/* line 21, ../../../../../lims-styles/sass/partials/_form.scss */
+form fieldset .value {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 790px;
+}
+/* line 147, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html form fieldset .value {
+  overflow-x: hidden;
+}
+/* line 26, ../../../../../lims-styles/sass/partials/_form.scss */
+form fieldset .tagify-container {
+  width: 300px;
+  height: auto;
+  margin-left: 2px;
+  border: 1px solid #909090;
+  border-radius: 0;
+}
+/* line 32, ../../../../../lims-styles/sass/partials/_form.scss */
+form fieldset .tagify-container > input {
+  font-size: 1em;
+}
+/* line 35, ../../../../../lims-styles/sass/partials/_form.scss */
+form fieldset .tagify-container > span {
+  border: 1px solid #909090;
+  color: #202020;
+}
+/* line 42, ../../../../../lims-styles/sass/partials/_form.scss */
+form fieldset .select-list-field select {
+  display: inline-block;
+  float: left;
+  margin-right: 1em;
+}
+/* line 47, ../../../../../lims-styles/sass/partials/_form.scss */
+form fieldset .select-list-field .selected-items {
+  display: inline-block;
+}
+/* line 50, ../../../../../lims-styles/sass/partials/_form.scss */
+form fieldset .select-list-field .message {
+  clear: both;
+}
+/* line 55, ../../../../../lims-styles/sass/partials/_form.scss */
+form fieldset .error {
+  color: red;
+}
+/* line 59, ../../../../../lims-styles/sass/partials/_form.scss */
+form fieldset .many-text-field .message {
+  display: block;
+}
+/* line 65, ../../../../../lims-styles/sass/partials/_form.scss */
+form fieldset.command {
+  padding-left: 160px;
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 790px;
+}
+/* line 147, ../../../../../../../.rvm/gems/ruby-1.9.2-p290@web/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html form fieldset.command {
+  overflow-x: hidden;
+}
+/* line 68, ../../../../../lims-styles/sass/partials/_form.scss */
+form fieldset.command input {
+  width: 7em;
+  margin-right: 0.5em;
+}
+
+/* line 77, ../../../../../lims-styles/sass/partials/_form.scss */
+.ui-autocomplete.ui-menu {
+  width: 295px;
+}
+
+/* line 7, ../../../../../lims-styles/sass/partials/_login.scss */
+body.login #container {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+  margin-bottom: 0.5em;
+  position: relative;
+  background-image: url("../images/backgrounds/wave-background.jpg");
+  background-position: top;
+  background-repeat: repeat-none;
+  background-position: 0 -80px;
+}
+/* line 17, ../../../../../lims-styles/sass/partials/_login.scss */
+body.login header {
+  background: none;
+}
+/* line 20, ../../../../../lims-styles/sass/partials/_login.scss */
+body.login header .background {
+  background-image: url("../images/backgrounds/menu-background.png");
+  background-position: top;
+  background-repeat: repeat-x;
+  opacity: 0.9;
+  position: absolute;
+  z-index: 0;
+  width: 950px;
+  height: 40px;
+}
+/* line 31, ../../../../../lims-styles/sass/partials/_login.scss */
+body.login header h1 {
+  color: #e0e0e0;
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+  width: 950px;
+}
+/* line 42, ../../../../../lims-styles/sass/partials/_login.scss */
+body.login #main {
+  padding: none;
+  height: 530px;
+  padding: 0;
+  background: none;
+}
+/* line 48, ../../../../../lims-styles/sass/partials/_login.scss */
+body.login #main form, body.login #main .background {
+  position: absolute;
+  left: 275px;
+  top: 165px;
+  width: 400px;
+  height: 200px;
+}
+/* line 56, ../../../../../lims-styles/sass/partials/_login.scss */
+body.login #main .background {
+  z-index: 0;
+  background-color: white;
+  opacity: 0.8;
+  border: 1px solid black;
+}
+/* line 63, ../../../../../lims-styles/sass/partials/_login.scss */
+body.login #main form {
+  z-index: 1;
+  padding: 1.5em;
+}
+/* line 66, ../../../../../lims-styles/sass/partials/_login.scss */
+body.login #main form label {
+  width: 120px;
+  margin: 0;
+}
+/* line 70, ../../../../../lims-styles/sass/partials/_login.scss */
+body.login #main form label.remember-me {
+  float: none;
+  display: inline;
+  font-weight: normal;
+}
+/* line 76, ../../../../../lims-styles/sass/partials/_login.scss */
+body.login #main form input.text {
+  width: 21em;
+}
+/* line 79, ../../../../../lims-styles/sass/partials/_login.scss */
+body.login #main form input.first {
+  margin-left: 120px;
+}
+/* line 85, ../../../../../lims-styles/sass/partials/_login.scss */
+body.login #main .error {
+  color: red;
+}
+
+/* line 10, ../../../../../lims-styles/sass/partials/_user.scss */
+#user .positioning-wrapper {
+  position: relative;
+  height: 32px;
+  float: right;
+  margin-right: 1em;
+}
+/* line 17, ../../../../../lims-styles/sass/partials/_user.scss */
+#user .user-menu {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 100%;
+  height: 26px;
+  position: relative;
+}
+/* line 23, ../../../../../lims-styles/sass/partials/_user.scss */
+#user .user-menu .ui-widget-content, #user .user-menu .ui-state-default {
+  border: none;
+}
+/* line 26, ../../../../../lims-styles/sass/partials/_user.scss */
+#user .user-menu .name {
+  font-size: 1.1em;
+  display: inline-block;
+}
+/* line 31, ../../../../../lims-styles/sass/partials/_user.scss */
+#user .user-menu .open-menu-container {
+  display: inline-block;
+  position: relative;
+  width: 23px;
+  height: 14px;
+}
+/* line 37, ../../../../../lims-styles/sass/partials/_user.scss */
+#user .user-menu .open-menu {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  width: 23px;
+  height: 25px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+/* line 49, ../../../../../lims-styles/sass/partials/_user.scss */
+#user .user-menu .open-menu .icon {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 9px;
+  height: 6px;
+  background: url("../images/icons/small/triangle-down.png") no-repeat;
+}
+/* line 57, ../../../../../lims-styles/sass/partials/_user.scss */
+#user .user-menu .open-menu:hover, #user .user-menu .open-menu.active {
+  background: white;
+  border: 1px solid #909090;
+  border-bottom: none;
+}
+/* line 61, ../../../../../lims-styles/sass/partials/_user.scss */
+#user .user-menu .open-menu:hover .icon, #user .user-menu .open-menu.active .icon {
+  background: url("../images/icons/small/triangle-down-000000.png") no-repeat;
+}
+/* line 67, ../../../../../lims-styles/sass/partials/_user.scss */
+#user .user-menu .popup-menu {
+  position: absolute;
+  width: 13em;
+  height: 4em;
+}
+/* line 71, ../../../../../lims-styles/sass/partials/_user.scss */
+#user .user-menu .popup-menu .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: white;
+  opacity: 0.9;
+  border: 1px solid #909090;
+  border-top: none;
+}
+/* line 82, ../../../../../lims-styles/sass/partials/_user.scss */
+#user .user-menu .popup-menu .menu-content {
+  position: absolute;
+  top: 0px;
+  left: 1px;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+}
+/* line 89, ../../../../../lims-styles/sass/partials/_user.scss */
+#user .user-menu .popup-menu .menu-content ul {
+  list-style-type: none;
+}
+/* line 91, ../../../../../lims-styles/sass/partials/_user.scss */
+#user .user-menu .popup-menu .menu-content ul li {
+  position: relative;
+  height: 2em;
+}
+/* line 94, ../../../../../lims-styles/sass/partials/_user.scss */
+#user .user-menu .popup-menu .menu-content ul li a {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  color: #202020;
+  text-decoration: none;
+}
+/* line 100, ../../../../../lims-styles/sass/partials/_user.scss */
+#user .user-menu .popup-menu .menu-content ul li a:hover {
+  background: #dae6f4;
+}
+/* line 103, ../../../../../lims-styles/sass/partials/_user.scss */
+#user .user-menu .popup-menu .menu-content ul li a span {
+  display: inline-block;
+  margin: 0.5em;
+}
+
+/* line 3, ../../../../../lims-styles/sass/partials/_sample-type.scss */
+table.sample-type td.name, table.sample-type th.name {
+  width: 26%;
+}
+/* line 6, ../../../../../lims-styles/sass/partials/_sample-type.scss */
+table.sample-type td.codes, table.sample-type th.codes {
+  width: 26%;
+}
+/* line 9, ../../../../../lims-styles/sass/partials/_sample-type.scss */
+table.sample-type td.description, table.sample-type th.description {
+  width: 26%;
+}
+/* line 12, ../../../../../lims-styles/sass/partials/_sample-type.scss */
+table.sample-type td.actions, table.sample-type th.actions {
+  width: 22%;
+}
+
+/* line 3, ../../../../../lims-styles/sass/partials/_target-type.scss */
+table.target-type td.name, table.target-type th.name {
+  width: 26%;
+}
+/* line 6, ../../../../../lims-styles/sass/partials/_target-type.scss */
+table.target-type td.codes, table.target-type th.codes {
+  width: 26%;
+}
+/* line 9, ../../../../../lims-styles/sass/partials/_target-type.scss */
+table.target-type td.description, table.target-type th.description {
+  width: 26%;
+}
+/* line 12, ../../../../../lims-styles/sass/partials/_target-type.scss */
+table.target-type td.actions, table.target-type th.actions {
+  width: 22%;
+}

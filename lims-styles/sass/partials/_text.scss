@@ -1,0 +1,55 @@
+html { 
+  font-size:100.01%;
+}
+
+body {
+  font-size: 75%; //  Base font size is a percentage of 16px.
+  /* 
+    12px = 75%
+    13px = 81%
+    14px = 88%
+  */
+  font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2.0em;
+  margin-bottom: 0.25em;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.25em;
+}
+
+section.main.heading .margin-wrapper {
+  h1, h2, h3 {
+    margin: 0;
+  }
+}
+
+.content {
+  li { margin-left: 1.5em; }
+}
+
+span.term {
+  white-space: nowrap;
+  &:before, &:after {
+    content: '"';
+  }
+}
+
+p {
+  margin-bottom: 0.5em;
+}
+
+em {
+  font-style: italic;
+}
+

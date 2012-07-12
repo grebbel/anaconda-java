@@ -1,0 +1,42 @@
+<table class="tag">
+  <thead>
+    <tr>
+      <th class="name">Tag</th>
+      <th class="category">Category</th>
+      <th class="description">Description</th>
+      <th class="actions"></th>
+  </thead>
+  <tbody>
+  	{{#each tag in content}}
+    	<tr>
+    	  <td class="name">
+    	    <a {{action editEntity href=true context="tag"}}>{{tag.name}}</a>
+  	    </td>
+  	    <td class="category">
+  	      {{tag.category}}
+	      </td>
+  	    <td class="description">
+  	      {{tag.description}}
+	      </td>
+  	    <td class="actions">
+  	      {{#view App.IconButton primary="ui-icon-trash"}}
+    	      <button {{action deleteEntity target="controller" context="tag"}}>Delete Tag</button>
+    	    {{/view}}
+	      </td>
+  	  </tr>
+	  {{/each}}
+  </tbody>
+	{{#if content.length}}
+    <tfoot>
+        <tr>
+          <td>
+            {{#view App.IconButton primary="ui-icon-plus"}}
+              <button {{action createEntity target="controller"}}>Create Tag</button>
+            {{/view}}
+          </td>
+          <td class="blank" colspan="3">
+          </td>
+        </tr>
+    </tfoot>
+  {{/if}}
+</table>

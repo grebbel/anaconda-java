@@ -1,0 +1,36 @@
+<definitions id="definitions" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" targetNamespace="http://www.runnable.nl/lims/rijnstate"
+	xmlns:tns="http://www.runnable.nl/lims/rijnstate" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd"
+	xmlns:activiti="http://activiti.org/bpmn">
+
+	<process id="request">
+
+		<startEvent id="start" />
+
+		<sequenceFlow sourceRef="start" targetRef="intake" />
+
+		<userTask id="intake">
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>technician</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+
+		<sequenceFlow sourceRef="intake" targetRef="organizeAnalyses">
+			<conditionExpression>${request.status == 'ACCEPTED'}</conditionExpression>
+		</sequenceFlow>
+
+		<sequenceFlow sourceRef="intake" targetRef="end">
+			<conditionExpression>${request.status == 'DENIED'}</conditionExpression>
+		</sequenceFlow>
+
+		<userTask id="organizeAnalyses" activiti:candidateGroups="technician">
+			<documentation>request.organizeAnalyses</documentation>
+		</userTask>
+
+		<endEvent id="end" />
+
+	</process>
+
+</definitions>

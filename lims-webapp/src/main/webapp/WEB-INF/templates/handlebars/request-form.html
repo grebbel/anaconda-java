@@ -1,0 +1,37 @@
+<form>
+  {{#with content}}
+    <fieldset class="required">
+      <label>Identifier</label>
+      <div class="value">
+        {{view App.TextField contentBinding="externalId" validation="notEmpty"}}
+      </div>
+    </fieldset>
+    <fieldset class="required">
+      <label>Description</label>
+      <div class="value">
+        {{view App.TextField contentBinding="description" foocus=true validation="notEmpty"}}
+      </div>
+    </fieldset>
+    <fieldset class="required">
+      <label>Sample Type</label>
+      <div class="value">
+        {{view App.SelectField contentBinding="sampleTypeId" source="sample-types" isRequired=true}}
+      </div>
+    </fieldset>
+    <fieldset class="required">
+      <label>Targets</label>
+      <div class="value">
+        {{view App.SelectListField contentBinding="targetIds" source="targets" multiple=true size=20 isRequired=true}}
+      </div>
+    </fieldset>
+    <fieldset class="required">
+      <label>Date</label>
+      <div class="value">
+        {{view App.DateField contentBinding="date" validation="notEmpty"}}
+      </div>
+    </fieldset>
+    <fieldset class="command" >
+      {{view App.FormButtons}}
+    </fieldset>
+  {{/with}}
+</form>

@@ -1,0 +1,76 @@
+table.analysis {
+  td, th {
+    // 40% total:
+    &.date {
+      width: 13%;
+    }
+    &.request {
+      width: 27%;
+    }
+    // 60% total:
+    &.target {
+      width: 26%;
+    }
+    &.assay {
+      width: 26%;
+    }
+    &.ct {
+      width: 8%;
+      .positive {
+        color: green;
+        &:after {
+          content: ' +';
+        }
+      }
+      .negative {
+        color: red;
+        &:after {
+          content: ' -';
+        }
+      }
+    }
+  }
+}
+
+.amplification {
+  margin-top: 0.5em;
+  width: 90%;  
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+.amplification section {
+  
+  display: inline-block;
+    
+  float: left;
+  
+  width: 33%;
+  
+}
+
+table.amplification {
+  
+  clear: both;
+  
+  td, th {
+    
+    &.number {
+      text-align: right;
+    }
+    
+    &.cycle {
+      width: 30%;
+    }
+    &.rn {
+      width: 35%;
+    }
+    &.delta-rn {
+      width: 35%;
+    }    
+    &.after-treshold, &.before-treshold {
+      font-weight: bold;            
+    }    
+  }
+  
+}

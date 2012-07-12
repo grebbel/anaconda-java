@@ -1,0 +1,13 @@
+table.task {
+  td,th {
+    &.description {
+      width: 40%;
+    }
+    &.due {
+      width: 15%;
+    }
+    &.assign {
+      width: 20%;
+    }
+  }
+}

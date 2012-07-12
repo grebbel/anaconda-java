@@ -1,0 +1,3 @@
+{{#with view.content}}
+<a {{action showUser context="user" href=true}}>{{user.name}}</a> submitted request <a {{action editRequest context="resource" href=true}}> {{resource.description}}</a>
+{{/with}}

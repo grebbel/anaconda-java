@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<div th:fragment="popup">
+
+	<form th:action="@{/import/requests}" enctype="multipart/form-data" method="post">
+		<fieldset>
+			<legend th:text="#{tools.import-requests}">Import Analyses</legend>
+			<div>
+				<label for="requests-file" th:text="#{tools.excel-file}">File</label>
+				<input type="file" id="requests-file" name="file" />
+			</div>
+			<div>
+				<label for="delete-existing-requests" th:text="#{tools.delete-existing}">Delete Existing</label>
+				<input type="checkbox" id="delete-existing-requests" name="deleteExisting" value="true" />
+				<label for="delete-existing-requests" th:text="#{tools.delete-existing-requests}" class="checkbox"></label>
+			</div>
+			<div>
+				<label th:text="#{tools.upload}">&nbsp;</label>
+				<input type="submit" th:value="#{tools.upload}" />
+			</div>
+		</fieldset>
+	</form>
+	
+	<form th:action="@{/api/v1/calculate-cts/form}" id="calculate-cts" method="post">
+		<fieldset>
+			<legend>Calculate CTs</legend>
+			<div>
+				<label for="store">Store results</label>
+				<input type="checkbox" id="store" name="store" value="true" checked="checked" />
+				<label for="store" class="checkbox">Store CTs in analyses</label>
+			</div>
+			<div>
+				<label for="asynchronous">Background</label>
+				<input type="checkbox" id="asynchronous" name="asynchronous" value="true"/>
+				<label for="asynchronous" class="checkbox">Calculate in background</label>
+			</div>
+			<div>
+				<label>Calculate</label>
+				<input type="submit" value="Calculate CTs" />
+			</div>
+		</fieldset>
+	</form>
+	
+	<!-- <form th:action="@{/import/amplifications}" enctype="multipart/form-data" method="post">
+		<fieldset>
+			<legend th:text="#{tools.import-amplifications}">Import Amplifications</legend>
+			<div>
+				<label for="amplifications-file" th:text="#{tools.excel-file}">File</label>
+				<input type="file" id="amplifications-file" name="file" />
+			</div>
+			<div>
+				<label for="amplifications-file" th:text="#{tools.target}">Target</label>
+				<select name="target">
+					<option th:each="target: ${targets}" th:text="${target.name}">Adeno</option>
+				</select>
+			</div>
+			<div>
+				<label th:text="#{tools.upload}">&nbsp;</label>
+				<input type="submit" th:value="#{tools.upload}" />
+			</div>
+		</fieldset>
+	</form> -->
+	
+</div>
+
+</html>

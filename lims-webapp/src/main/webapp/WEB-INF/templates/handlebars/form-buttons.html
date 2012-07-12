@@ -1,0 +1,6 @@
+{{#view App.Button labelBinding="view.submitLabel"}}
+  <input type="submit" {{bindAttr value="view.label"}} class="first"/>
+{{/view}}
+{{#view App.Button}}
+  <input type="button" value="Cancel" {{action cancelEdit target="controller"}}/>
+{{/view}}

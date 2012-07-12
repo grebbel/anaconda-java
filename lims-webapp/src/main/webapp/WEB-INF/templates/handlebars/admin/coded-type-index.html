@@ -1,0 +1,44 @@
+<table class="sample-type target-type coded-type">
+  <thead>
+    <tr>
+      <th class="name">Sample Type</th>
+			<th class="codes">Codes</th>
+      <th class="description">Description</th>
+      <th class="actions"></th>
+  </thead>
+  <tbody>
+  	{{#each codedType in content}}
+    	<tr>
+    	  <td class="name">
+    	    <a {{action editEntity href=true context="codedType"}}>{{codedType.name}}</a>
+  	    </td>
+  	    <td class="codes">
+		      <ul>
+  		      {{#each codedType.codes}}
+  		        <li>{{this}}</li>
+		        {{/each}}
+		      </ul>		      
+	      </td>
+  	    <td class="description">
+  	      {{codedType.description}}
+	      </td>
+  	    <td class="actions">
+  	      {{#view App.IconButton primary="ui-icon-trash" entityNameBinding="view.entityName"}}
+    	      <button {{action deleteEntity target="controller" context="codedType"}}>Delete {{view.entityName}}</button>
+    	    {{/view}}
+	      </td>
+  	  </tr>
+	  {{/each}}
+  </tbody>
+  <tfoot>
+      <tr>
+        <td>
+          {{#view App.IconButton primary="ui-icon-plus" entityNameBinding="view.entityName"}}
+            <button {{action createEntity target="controller"}}>Create {{view.entityName}}</button>
+          {{/view}}
+        </td>
+        <td class="blank" colspan="3">
+        </td>
+      </tr>
+  </tfoot>
+</table>

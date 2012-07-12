@@ -1,0 +1,16 @@
+<header>
+	<nav id="navigation">
+		<div class="margin-wrapper">
+  	   {{view App.NavigationBar}}
+		</div>
+	</nav>
+	<div id="user">
+	  <div class="positioning-wrapper">
+		  {{view App.UserMenu userBinding="App.user"}}
+		</div>
+	</div>
+</header>
+<content>
+  {{outlet}}
+</content>
+{{view templateName="logout-confirmation-dialog"}}

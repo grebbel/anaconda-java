@@ -1,0 +1,26 @@
+{{#with view}}
+  {{#each sections}}
+    <section {{bindAttr class="last"}}>
+      <table class="amplification">
+        <thead>
+          <tr>
+            <th class="cycle number">Cycle</th>
+            <th class="rn number">RN</th>
+            <th class="delta-rn number">dRN</th>
+          </tr>
+        </thead>
+        <tbody>
+      	  {{#each content}}
+      	    {{#view App.AmplificationRow contentBinding="this" analysisBinding="controller.content"}}
+      	      {{#with view.content}}
+      	        <td {{bindAttr class="view.beforeTreshold view.afterTreshold view.status :number"}}>{{cycle}}</td>
+      	        <td {{bindAttr class="view.beforeTreshold view.afterTreshold view.status :number"}}>{{view App.Number valueBinding="rn" format="0.0000"}} </td>
+      	        <td {{bindAttr class="view.beforeTreshold view.afterTreshold view.status :number"}}>{{view App.Number valueBinding="drn" format="0.0000"}}</td>
+          	  {{/with}}
+      	    {{/view}}
+      	  {{/each}}	     
+        </tbody>
+      </table>
+    </section>
+  {{/each}}
+{{/with}}

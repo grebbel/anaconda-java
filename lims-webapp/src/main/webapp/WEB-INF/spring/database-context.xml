@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd 
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd 
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+	">
+
+	<description>Contains database and JPA configuration.</description>
+
+	<bean id="dataSource" class="com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource">
+		<property name="serverName" value="localhost" />
+		<property name="databaseName" value="${database.name:lims_dev}" />
+		<property name="user" value="${database.username:lims_dev}" />
+		<property name="password" value="${database.password:lims_dev}" />
+	</bean>
+
+	<bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+		<property name="database" value="${database.jpa.database:MYSQL}" />
+		<property name="generateDdl" value="${database.jpa.generate-ddl:true}" />
+		<property name="showSql" value="${database.jpa.show-sql:false}" />
+	</bean>
+
+	<import resource="classpath:/META-INF/spring/jpa-context.xml" />
+
+</beans>

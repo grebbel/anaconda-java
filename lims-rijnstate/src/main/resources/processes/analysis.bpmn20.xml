@@ -1,0 +1,121 @@
+<definitions id="definitions" xmlns:activiti="http://activiti.org/bpmn" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+	targetNamespace="http://www.runnable.nl/lims/rijnstate" xmlns:tns="http://www.runnable.nl/lims/rijnstate">
+
+	<message id="newAnalysis" name="NewAnalysis" />
+
+	<process id="analysis" name="Analysis">
+
+		<!-- Start -->
+
+		<startEvent id="startAnalysis">
+			<messageEventDefinition messageRef="tns:newAnalysis" />
+		</startEvent>
+
+		<sequenceFlow sourceRef="startAnalysis" targetRef="preparationGateway" />
+
+		<parallelGateway id="preparationGateway" />
+
+		<!-- DNA extraction -->
+
+		<sequenceFlow sourceRef="preparationGateway" targetRef="analysisTypeGateway" />
+
+		<exclusiveGateway id="analysisTypeGateway" />
+
+		<!-- STD DNA extraction -->
+
+		<sequenceFlow sourceRef="analysisTypeGateway" targetRef="prepareStdUrineSampleTask">
+			<!-- <conditionExpression>${analysis.targetTypeId == 'STD' and analysis.sampleTypeId == 'URN'}</conditionExpression>-->
+			<conditionExpression>${analysis.std}</conditionExpression>
+		</sequenceFlow>
+
+		<sequenceFlow sourceRef="analysisTypeGateway" targetRef="extractStdDnaTask">
+			<!-- <conditionExpression>${analysis.targetTypeId == 'STD' and analysis.sampleTypeId != 'URN'}</conditionExpression> -->
+			<conditionExpression>${!analysis.std}</conditionExpression>
+		</sequenceFlow>
+
+		<userTask id="prepareStdUrineSampleTask">
+			<documentation>
+				Prepare urine sample.
+			</documentation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>technician</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+
+		<sequenceFlow sourceRef="prepareStdUrineSampleTask" targetRef="extractStdDnaTask" />
+
+		<userTask id="extractStdDnaTask">
+			<documentation>
+				Extract DNA for STD analysis.
+			</documentation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>technician</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+
+		<sequenceFlow sourceRef="extractStdDnaTask" targetRef="amplificationGateway" />
+
+		<!-- MRSA DNA extraction -->
+
+		<sequenceFlow sourceRef="analysisTypeGateway" targetRef="extractMrsaDnaTask">
+			<conditionExpression>${analysis.targetTypeId == 'MRSA'}</conditionExpression>
+		</sequenceFlow>
+
+		<userTask id="extractMrsaDnaTask">
+			<documentation>
+				Extract DNA for MRSA analysis.
+			</documentation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>technician</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+
+		<sequenceFlow sourceRef="extractMrsaDnaTask" targetRef="amplificationGateway" />
+
+		<!-- Plate Setup -->
+
+		<sequenceFlow sourceRef="preparationGateway" targetRef="organizePlateTask" />
+
+		<userTask id="organizePlateTask">
+			<documentation>
+				Organize sample on plate
+			</documentation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>technician</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+
+		<sequenceFlow sourceRef="organizePlateTask" targetRef="amplificationGateway" />
+
+		<!-- Process -->
+
+		<parallelGateway id="amplificationGateway" />
+
+		<sequenceFlow sourceRef="amplificationGateway" targetRef="amplificationGateway" />
+
+		<userTask id="amplificationTask">
+			<documentation>
+				Process sample. Put sample on plate.
+			</documentation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>technician</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+
+		<!-- Confirmation -->
+
+		<endEvent id="end" />
+
+	</process>
+
+</definitions>

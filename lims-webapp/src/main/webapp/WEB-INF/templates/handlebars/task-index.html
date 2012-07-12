@@ -1,0 +1,26 @@
+<section class="main">
+  <div class="margin-wrapper">
+    <h2>Unassigned Tasks</h2>
+    <table class="unassigned task">
+      <thead>
+        <tr>
+          <th class="description">Description</th>
+          <th class="due">Due</th>
+          <th class="assign">Assign</th>
+        </tr>
+      </thead>
+      {{#each content.unassigned}}
+        <tr>
+          <td>
+            {{view contentBinding="this" templateName=templateName classNames="message"}}
+          </td>
+          <td>
+            {{due}}
+          </td>
+          <td>
+          </td>
+        </tr>
+      {{/each}}
+    </table>
+  </div>
+</section>

@@ -1,0 +1,1 @@
+App.UserDetailController = Em.Controller.extend();

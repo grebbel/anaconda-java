@@ -1,0 +1,105 @@
+$user-columns: 5;
+$nav-columns: $blueprint-grid-columns - $user-columns;
+
+#container {
+  @include container;
+  @include single-box-shadow;
+  margin-bottom: 0.5em;
+  border: 1px solid $border-color;
+  border-top: 0;
+}
+
+header {
+  @include column($blueprint-grid-columns);
+  background-image: url('../images/backgrounds/menu-background.png');
+  background-position: top;
+  background-repeat: repeat-x;
+  color: $header-text-color;
+  height: $header-height;
+  .margin-wrapper {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  a {
+    color: $header-text-color;
+    text-decoration: none;        
+    &:hover {
+      text-decoration: underline;      
+    }
+  }
+
+  nav {
+    @include column($nav-columns - 1);
+    @include append(1);
+    ul {    
+      list-style-type: none;    
+      font-size: 1.2em;
+      margin-bottom: 0em;
+      display: inline-block;
+      li {
+        color: $header-text-color;
+        float: left;
+        margin-right: 0.5em;
+        &:after {
+          content: ' | ';
+        }
+        &:last-of-type:after {
+          content: '';
+        }
+        &.selected {
+          // TODO: Come up with a more pleasant-looking highlight;
+          /*font-weight: bold;*/
+        }
+      }
+    }
+  }
+  #user {
+    @include column($user-columns, true);    
+  }
+
+}
+
+content {
+  background-color: $main-background-color;
+  min-height: $user-popup-menu-height;
+  @include column($blueprint-grid-columns, true);  
+  #main {
+    @include column($blueprint-grid-columns, true);
+    section {
+      margin-top: 0.5em;
+      &.main {
+        @include column($blueprint-grid-columns, true);    
+      }
+      &.primary {
+        @include column($two-thirds-columns);
+      }
+      &.secondary {
+        @include column($one-third-columns, true);
+      }
+      .margin-wrapper {
+        margin-left: 1em;
+        margin-right: 1em;
+      }
+    }
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+  }
+}
+
+.field {
+  @include column($blueprint-grid-columns, true);   
+  margin-bottom: 0.5em;
+  label {
+    @include column(4, false);
+    font-weight: bold;
+  }
+  .value {
+    @include column($blueprint-grid-columns - 4, true);
+  }
+  ul li {
+    margin-left: 1.5em;
+  }
+}
